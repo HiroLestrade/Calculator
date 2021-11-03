@@ -1,3 +1,9 @@
+/* Upgrades
+    1. Delete button.
+    2. Concatenate the last operation
+    3. Development memory and display diagram
+*/
+
 let operation = false;
 let writing = false;
 let operatorPrev = true;
@@ -11,11 +17,22 @@ const bttns = document.querySelectorAll(".bttn").forEach((bttn) => {
         switch (bttn.innerText) {
             //Equals. Eval the operation and jump to the post operation state.
             case "=":
-                writing = false;
-                operation = true;
-                operatorPrev = false;
-                dot = false;
-                txt.value = eval(txt.value);
+                if(txt.value != "Error"){
+                    try{
+                        txt.value = eval(txt.value);
+                        writing = false;
+                        operation = true;
+                        operatorPrev = false;
+                        dot = false;
+                    }
+                    catch(error){
+                        txt.value = "Error"
+                        writing = false;
+                        operation = true;
+                        operatorPrev = true;
+                        dot = false;
+                    }
+                }
                 break;
 
             //Clear. Return to the initial state.
