@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --background: #2c2c54;
+    --primary: #40407a;
+    --secondary: #b33939;
+    --tertiary: #227093;
+    --contrast: #cc8e35;
+    --shadow: #1e272e;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 100px;
+    height: 100vh;
+    background: var(--background);
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid rgba(0,0,0,0.1);
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator{
+    width: 240px;
+    height: 360px;
+    margin: 100px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: repeat(6, 60px);
+    box-shadow: 0 0 5px var(--shadow),
+                0 0 10px var(--shadow),
+                0 0 15px var(--shadow);
+}
+
+.calculator input{
+    grid-column: span 4;
+    text-align: right;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    border-top-left-radius: 5% 20%;
+    border-top-right-radius: 5% 20%;
+}
+
+.calculator .bttn{
+    display: grid;
+    color: #fff;
+    background: var(--primary);
+    place-items: center;
+    border: 2px solid rgba(0,0,0,0.1);
+}
+
+.calculator .bttn:active{
+    background-color: var(--contrast);
+    color: #111;
+}
+
+.calculator .clear{
+    grid-column: span 2;
+    background: var(--secondary);
+}
+
+.calculator .plus{
+    grid-row: span 2;
+}
+
+.calculator .equal{
+    background: var(--tertiary);
+}
+
+.calculator .cero{
+    grid-column: span 2;
+}
+
+footer{
+    height: 100px;
+    border-top: 5px solid rgba(0,0,0,0.1);
+    padding: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+footer img{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    filter: invert();
+}
+
+
+
+
