@@ -8,11 +8,11 @@
 }
 
 :root{
-    --background: #2c2c54;
-    --primary: #40407a;
-    --secondary: #b33939;
-    --tertiary: #227093;
-    --contrast: #cc8e35;
+    --background: #38182F;
+    --primary: #2F394D;
+    --secondary: #56666B;
+    --third: #56666B;
+    --contrast: #EEE1B3;
     --shadow: #1e272e;
 }
 
@@ -22,6 +22,7 @@ body{
     grid-template-rows: 100px 1fr 100px;
     height: 100vh;
     background: var(--background);
+    text-shadow: 1px 1px 4px black;
 }
 
 header{
@@ -51,6 +52,8 @@ section{
     box-shadow: 0 0 5px var(--shadow),
                 0 0 10px var(--shadow),
                 0 0 15px var(--shadow);
+    border-top-left-radius: 5% 20%;
+    border-top-right-radius: 5% 20%;
 }
 
 .calculator input{
@@ -69,6 +72,7 @@ section{
     background: var(--primary);
     place-items: center;
     border: 2px solid rgba(0,0,0,0.1);
+    text-shadow: 1px 1px 4px black;
 }
 
 .calculator .bttn:active{
@@ -86,7 +90,7 @@ section{
 }
 
 .calculator .equal{
-    background: var(--tertiary);
+    background: var(--third);
 }
 
 .calculator .cero{
@@ -94,9 +98,9 @@ section{
 }
 
 footer{
-    height: 100px;
+    height: 70px;
     border-top: 5px solid rgba(0,0,0,0.1);
-    padding: 30px;
+    padding: 0px 30px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
